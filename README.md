@@ -32,4 +32,8 @@ yarn dev
 
 Então acesse no seu navegador: [http://localhost:3000/](http://localhost:3000/)
 
-<!-- ## Deploy on Vercel -->
+## Deploy na Vercel
+
+este link abre na mesma guia!
+
+link: [https://td-teste.vercel.app/](https://td-teste.vercel.app/)
