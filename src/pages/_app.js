@@ -7,7 +7,7 @@ export default function App({ Component, pageProps }) {
       <DefaultSeo
         titleTemplate="Tropa Digital | %s"
         openGraph={{
-          url: "",
+          url: "https://raw.githubusercontent.com/AndrewCrescencio/td-teste/main/public/og-image.webp",
           title: "Tropa Digital",
           description: "Teste de Front-end feito por Andrew Crescencio",
           siteName: "Tropa Digital",
