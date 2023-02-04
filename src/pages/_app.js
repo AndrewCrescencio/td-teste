@@ -4,15 +4,7 @@ import { DefaultSeo } from "next-seo";
 export default function App({ Component, pageProps }) {
   return (
     <AppThemeProvider>
-      <DefaultSeo
-        titleTemplate="Tropa Digital | %s"
-        openGraph={{
-          url: "https://raw.githubusercontent.com/AndrewCrescencio/td-teste/main/public/og-image.webp",
-          title: "Tropa Digital",
-          description: "Teste de Front-end feito por Andrew Crescencio",
-          siteName: "Tropa Digital",
-        }}
-      />
+      <DefaultSeo titleTemplate="Tropa Digital | %s" />
       <Component {...pageProps} />
     </AppThemeProvider>
   );
