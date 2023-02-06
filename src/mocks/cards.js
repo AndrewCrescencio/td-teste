@@ -4,6 +4,7 @@ export const cards = [
     text: "Lorem Ipsum is simply dummy text of the printing and typesettin.",
     image: "/images/card-image.webp",
     imageAltText: "texto alternativo da imagem",
+    date: "2min atrás",
     id: 1,
   },
   {
@@ -11,6 +12,7 @@ export const cards = [
     text: "Lorem Ipsum is simply dummy text of the printing and typesettin.",
     image: "/images/card-image.webp",
     imageAltText: "texto alternativo da imagem",
+    date: "2min atrás",
     id: 2,
   },
   {
@@ -18,6 +20,7 @@ export const cards = [
     text: "Lorem Ipsum is simply dummy text of the printing and typesettin.",
     image: "/images/card-image.webp",
     imageAltText: "texto alternativo da imagem",
+    date: "2min atrás",
     id: 3,
   },
   {
@@ -25,6 +28,7 @@ export const cards = [
     text: "Lorem Ipsum is simply dummy text of the printing and typesettin.",
     image: "/images/card-image.webp",
     imageAltText: "texto alternativo da imagem",
+    date: "2min atrás",
     id: 4,
   },
   {
@@ -32,6 +36,7 @@ export const cards = [
     text: "Lorem Ipsum is simply dummy text of the printing and typesettin.",
     image: "/images/card-image.webp",
     imageAltText: "texto alternativo da imagem",
+    date: "2min atrás",
     id: 5,
   },
   {
@@ -39,6 +44,7 @@ export const cards = [
     text: "Lorem Ipsum is simply dummy text of the printing and typesettin.",
     image: "/images/card-image.webp",
     imageAltText: "texto alternativo da imagem",
+    date: "2min atrás",
     id: 6,
   },
 ];
