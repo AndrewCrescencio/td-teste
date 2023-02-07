@@ -1,14 +1,21 @@
+import { Formik, Form, Field } from "formik";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import React, { useState } from "react";
 import { IconEye } from "../icons/IconEye";
 import { IconEyeClosed } from "../icons/IconEyeClosed";
 import {
-  Form,
+  // Form,
   Input,
   PasswordContainer,
   ShowPasswordButton,
   SubmitButton,
 } from "./styles";
+
+interface LoginFormValues {
+  email: string;
+  password: string;
+  // isShown: boolean;
+}
 
 export const LoginForm = () => {
   const [email, setEmail] = useState("");
@@ -26,22 +33,29 @@ export const LoginForm = () => {
     route.push("/home");
   };
 
+  const initialValues: LoginFormValues = { email: "", password: "" };
   return (
-    <>
-      <Form onSubmit={(e) => handleSubmit(e)}>
-        <Input
-          type="text"
-          placeholder="digite seu e-mail"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+    <Formik
+      initialValues={initialValues}
+      onSubmit={(values, actions) => {
+        console.log({ values, actions });
+        alert(JSON.stringify(values, null, 2));
+        actions.setSubmitting(false);
+      }}
+    >
+      <Form>
+        <Field id="email" name="email" placeholder="Digite seu e-mail" />
         <PasswordContainer>
-          <Input
+          {/* <Input
             type={isShown ? "text" : "password"}
             placeholder="Password"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
+            onChange={(e: React.FormEvent<HTMLInputElement>) =>
+              setPassword(e.currentTarget.value)
+            }
+          /> */}
+          <Field id="password" name="password" placeholder="Digite sua senha" />
+
           <ShowPasswordButton onClick={(e) => togglePassword(e)}>
             {isShown ? <IconEyeClosed /> : <IconEye />}
           </ShowPasswordButton>
@@ -50,9 +64,9 @@ export const LoginForm = () => {
         <SubmitButton
           type="submit"
           value="Acessar"
-          disabled={(email.length < 8) & (password.length < 3)}
+          // disabled={email.length < 8 && password.length < 3}
         />
       </Form>
-    </>
+    </Formik>
   );
 };
